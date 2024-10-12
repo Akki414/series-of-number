@@ -1,0 +1,14 @@
+def next_element(N, series):
+    if N < 2:
+        return '-999'
+    
+    if series[1] - series[0] == series[2] - series[1]:
+        diff = series[-1] - series[-2]
+        next_val = series[-1] + diff
+    else:
+        next_val = series[-1] + series[-2]
+    
+    return next_val
+N = 3
+series = [2, 4, 6]
+print(next_element(N, series))
